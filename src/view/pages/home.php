@@ -25,7 +25,7 @@
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Programação dinâmica</h5>
-                <p class="card-text">Resolva, rapidamente, problemas de mochila com ilimitadas possibilidades de capacidade, valores e pesos.</p>
+                <p class="card-text">Resolva, rapidamente, problemas de PD (a.k.a mochila) com ilimitadas possibilidades de capacidade, valores e pesos.</p>
                 <a href="#" class="btn btn-primary">Calcular</a>
             </div>
             </div>
