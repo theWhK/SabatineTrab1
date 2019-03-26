@@ -20,6 +20,21 @@ switch ($request) {
         require PATH_ABS . '/view/pages/proglinear2.php';
         break;
 
+    case '/proglinear3' :
+        $paginaAtual = 'Programação Linear';
+        require PATH_ABS . '/view/pages/proglinear3.php';
+        break;
+    
+    case '/proglinear4' :
+        $paginaAtual = 'Programação Linear';
+        require PATH_ABS . '/view/pages/proglinear4.php';
+        break;
+
+    case '/proglinear5' :
+        $paginaAtual = 'Programação Linear';
+        require PATH_ABS . '/view/pages/proglinear5.php';
+        break;
+
     default:
         $paginaAtual = '404';
         require PATH_ABS . '/view/pages/404.php';

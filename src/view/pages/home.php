@@ -17,7 +17,7 @@
             <div class="card-body">
                 <h5 class="card-title">Programação linear</h5>
                 <p class="card-text">Usando o método Simplex, o Sabatinex está pronto para resolver problemas de PL com variáveis e restrições ilimitadas em instantes.</p>
-                <a href="#" class="btn btn-primary">Calcular</a>
+                <a href="<?=URL_BASE?>/proglinear1" class="btn btn-primary">Calcular</a>
             </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
             <div class="card-body">
                 <h5 class="card-title">Programação dinâmica</h5>
                 <p class="card-text">Resolva, rapidamente, problemas de PD (a.k.a mochila) com ilimitadas possibilidades de capacidade, valores e pesos.</p>
-                <a href="#" class="btn btn-primary">Calcular</a>
+                <a href="<?=URL_BASE?>/progdinamica" class="btn btn-primary">Calcular</a>
             </div>
             </div>
         </div>

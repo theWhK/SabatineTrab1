@@ -17,6 +17,17 @@
     .wlices--func--input {
         width: 70px;
     }
+
+    @media screen and (max-width: 640px) {
+        .wlices--func--grupo {
+            padding-bottom 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    .wlices--forma-padrao--bloco {
+        margin-bottom: 30px;
+    }
     </style>
 </head>
 <body>

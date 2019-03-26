@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-sm-12 mt-5">
             <h1>Programação Linear</h1>
+            <h3>Preenchimento dos campos</h3>
         </div>
         <div class="col-sm-12">
             <hr>
@@ -38,7 +39,7 @@
                 </div>
 
                 <h4 class="font-weight-bold mt-5">Restrições</h4>
-                <div class="form-group">
+                <div class="form-group wlices--func--grupo">
                     <input class="wlices--func--input" type="text" name="">
                     <span class="wlices--func--texto">
                         X<sub>1</sub>
@@ -55,7 +56,7 @@
                     </span>
                     <input class="wlices--func--input" type="text" name="">
                 </div>
-                <div class="form-group">
+                <div class="form-group wlices--func--grupo">
                     <input class="wlices--func--input" type="text" name="">
                     <span class="wlices--func--texto">
                         X<sub>1</sub>
