@@ -9,6 +9,40 @@ $tela->SetProjectName('Sabatinex');
 
 $conteudo='
   <form class="form-horizontal" action="restricoes.php" method="GET">
+  <div class="form-group row">
+  <label class="col-4">Objetivo</label> 
+  <div class="col-8">
+  <div class="custom-control custom-radio custom-control-inline">
+      <input name="objetivo" id="objetivo_0" type="radio" class="custom-control-input" value="max" aria-describedby="objetivoHelpBlock" required="required"> 
+      <label for="objetivo_0" class="custom-control-label">Maximizar</label>
+  </div>
+  <div class="custom-control custom-radio custom-control-inline">
+      <input name="objetivo" id="objetivo_1" type="radio" class="custom-control-input" value="min" aria-describedby="objetivoHelpBlock" required="required"> 
+      <label for="objetivo_1" class="custom-control-label">Minimizar</label>
+  </div> 
+  <span id="objetivoHelpBlock" class="form-text text-muted">Qual a intenção do sistema com as variáveis?</span>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-4 col-form-label" for="qtdVars">Quantidade de variáveis</label> 
+  <div class="col-8">
+  <input id="qtdVars" name="qtdVars" type="text" class="form-control" aria-describedby="qtdVarsHelpBlock" required="required"> 
+  <span id="qtdVarsHelpBlock" class="form-text text-muted">A quantidade de termos que há na sua função-objetivo</span>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="qtdRest" class="col-4 col-form-label">Quantidade de restrições</label> 
+  <div class="col-8">
+  <input id="qtdRest" name="qtdRest" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required"> 
+  <span id="qtdRestHelpBlock" class="form-text text-muted">A quantidade de restrições que serão aplicadas no sistema</span>
+  </div>
+</div> 
+<div class="form-group row">
+  <div class="offset-4 col-8">
+  <button name="submit" type="submit" class="btn btn-primary">Próximo passo ></button>
+  </div>
+</div>
+
     <fieldset>
 
       <!-- Form Name -->

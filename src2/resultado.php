@@ -72,7 +72,7 @@ do{
 	if ($passoapasso=='S')
 	{
 		$conteudo=$conteudo.'<strong><h3 style="text-align:center;">'.$qtderepeticoes.'<sup>a</sup> Iteração</h3></strong>';
-		$conteudo=$conteudo.'<br><h4>Etapa '.$etapa.': Descobrindo quem entra e quem sai da base.</h4>';
+		$conteudo=$conteudo.'<br><h4>Etapa '.$etapa.': Selecionando os coeficientes que irão entrar e sair</h4>';
 		$conteudo=$conteudo.'<h5 style="color:green;">Quem entra na base?</h5>';
 		$conteudo=$conteudo.'<h5><p><p>O valor mais negativo existente na função objetivo.</p></p></h5>';
 		$conteudo=$conteudo.'<h5 style="color:yellow;">Quem sai da base?</h5>';
@@ -132,9 +132,9 @@ do{
 
 	if ($passoapasso=='S')
 	{
-		$conteudo=$conteudo.'<h5 style="color:green;"><strong>Quem entra na base :</strong>'.$tabela[0][$ColunaDoMenor].'</h5>';
-		$conteudo=$conteudo.'<h5 style="color:yellow;"><strong>Quem Sai da base :</strong>'.$tabela[$LinhaDoMenor][0].'</h5>';
-		$conteudo=$conteudo.'<h5><strong>Calculos para identificar quem sai da base (menor valor):</strong><br></h5>';
+		$conteudo=$conteudo.'<h5 ><strong>Entra na base :</strong>'.$tabela[0][$ColunaDoMenor].'</h5>';
+		$conteudo=$conteudo.'<h5 ><strong>Sai da base:</strong>'.$tabela[$LinhaDoMenor][0].'</h5>';
+		$conteudo=$conteudo.'<h5><strong>Cálculos para identificar quem sai da base (escolhe-se o menor valor positivo):</strong><br></h5>';
 	}
 
 	array_push($naobasicas, $tabela[$LinhaDoMenor][0]);
