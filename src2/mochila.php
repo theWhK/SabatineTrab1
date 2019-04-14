@@ -1,3 +1,7 @@
+<?php
+require 'constants.php'
+?>
+
 <!doctype html>
 
 <html>
@@ -5,55 +9,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <link href="view/bootstrap/css/bootstrap.min.css" rel="stylesheet">    
+    <!--link href="css/bootstrap.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
     <script src="view/bootstrap/js/jquery.min.js"></script>
     <script src="view/bootstrap/js/scriptMochila.js"></script>
   </head>
 
-  <html lang="pt">
-        <head>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Método Mochila</title>
-            <link href="view/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-            <link href="view/bootstrap/css/app.css" rel="stylesheet">
-        </head>
-
-          <body>
-            <!--navbar-->
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Método Mochila ----------- BSI 5° A/S</a>
-                    </div>
-
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                          <li class="active"><a href="index.php">Simplex</a></li>
-                          <li class="active"><a href="mochila.html">Mochila</a></li>
-                          <li class="active"><a href="grupo.php">Grupo</a></li>
-                        </ul>
-                    </div>
-                  </div>
-              </nav> 
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-          <!--navbar-->
-
-          <script src="view/bootstrap/js/jquery.min.js"></script>
-          <script src="view/bootstrap/js/bootstrap.min.js"></script>
-        </body>
-      </html>
+  <?php
+  require(PATH_ABS.'/meudeusdoceu/header.php');
+  ?>
     <div class="container"> 
       <div id="panel" class="row">
         <div class="col-md-4 ">

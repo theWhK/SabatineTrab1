@@ -1,5 +1,6 @@
 <body>
 <?php
+require_once './constants.php';
 require('view/template.php');
 
 //cria-se objeto da classe template e define a ele o titulo e o conteudo que será impresso

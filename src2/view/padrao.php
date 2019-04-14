@@ -43,32 +43,12 @@ class template{
     			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 			    <link href="view/bootstrap/css/app.css" rel="stylesheet">
 			  </head>
-			  <body>
+			  <body>';
 
-			  
-			  <!--navbar-->
-			  <nav class="navbar navbar-expand-lg navbar-dark bg-info navbar-fixed-top">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="#">'       .$this->GetProjectName().     '</a>
-					</div>
-					<div id="navbar" class="collapse navbar-collapse">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.php">Home Simplex</a></li>
-							<li><a href="gruponomes.php">Grupo</a></li>
-							</ul>
-					</div>
-			    </nav> 
-			    <br>
-			    <br>
-			    <br>
-			    <br>
-			    <br>
+				require(PATH_ABS.'/meudeusdoceu/header.php');
+
+
+				echo ' 
 			    <!--navbar-->
 			    <div class="container theme-showcase">
 				    <div class="row">
@@ -89,7 +69,7 @@ class template{
 
 			    
 			  
-			    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 			    <!--script src="js/bootstrap.min.js"></script-->
     			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 			  </body>

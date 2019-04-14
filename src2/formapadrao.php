@@ -1,5 +1,6 @@
 <body>
 <?php
+require_once './constants.php';
 require('view/template.php');
 $tela = new template;
 session_start();

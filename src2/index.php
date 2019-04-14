@@ -1,7 +1,9 @@
 <body>
 <?php
-require('view/template.php');
+
 require_once './constants.php';
+require('view/template.php');
+
 
 
 //cria-se objeto da classe template e define a ele o titulo e o conteudo que será impresso
@@ -35,7 +37,7 @@ $conteudo='
             <div class="card-body">
                 <h5 class="card-title">Programação dinâmica</h5>
                 <p class="card-text">Resolva, rapidamente, problemas de PD (a.k.a mochila) com ilimitadas possibilidades de capacidade, valores e pesos.</p>
-                <a href="'.URL_BASE.'/mochila.html" class="btn btn-primary">Calcular</a>
+                <a href="'.URL_BASE.'/mochila.php" class="btn btn-primary">Calcular</a>
             </div>
             </div>
         </div>
