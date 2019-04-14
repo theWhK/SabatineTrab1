@@ -43,33 +43,12 @@ class template{
     			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 			    <link href="view/bootstrap/css/app.css" rel="stylesheet">
 			  </head>
-			  <body>
+			  <body>';
 
-			
-				<nav class="navbar navbar-expand-lg navbar-dark bg-info">
-					<a class="navbar-brand" href="'.URL_BASE.'"><strong>Sabatinex</strong></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="'.URL_BASE.'">Página inicial <span class="sr-only">(página atual)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="'.URL_BASE.'/proglinear1">Prog. Linear</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="'.URL_BASE.'/progdinamica">Prog. Dinâmica</a>
-						</li>
-						</ul>
-					</div>
-				</nav> 
-			    <br>
-			    <br>
-			    <br>
-			    <br>
-			    <br>
+				require(PATH_ABS.'/meudeusdoceu/header.php');
+
+
+				echo ' 
 			    <!--navbar-->
 			    <div class="container theme-showcase">
 				    <div class="row">
@@ -90,7 +69,7 @@ class template{
 
 			    
 			  
-			    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 			    <!--script src="js/bootstrap.min.js"></script-->
     			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 			  </body>
