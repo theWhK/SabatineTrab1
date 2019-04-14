@@ -3,6 +3,7 @@
 require_once './constants.php';
 require('view/template.php');
 $tela = new template;
+$tela->deixarPaginaNaoVisivel = true;
 session_start();
 $tela->SetTitle('Método Simplex');
 $tela->SetProjectName('Sabatinex');
@@ -182,7 +183,7 @@ $conteudo=$conteudo.
 	<!-- Button -->
 		<div class="form-group">
     		<label class="checkbox-inline"  for="passoapasso-0">
-      			<input type="checkbox" checked name="passoapasso" value="S">
+      			<input type="checkbox" checked name="passoapasso" value="S" id="passoapassocheckbox">
       			Mostrar passo-a-passo
     		</label><br><br>
     		<button id="submit" name="submit" class="btn btn-success">Continuar</button>
@@ -190,6 +191,38 @@ $conteudo=$conteudo.
 		</div>
 	</fieldset>
 </form>
+';
+
+$conteudo = $conteudo .
+'
+<script>
+function eventFire(el, etype){
+	if (el.fireEvent) {
+	  	el.fireEvent("on" + etype);
+	} else {
+	  	var evObj = document.createEvent("Events");
+	  	evObj.initEvent(etype, true, false);
+	  	el.dispatchEvent(evObj);
+	}
+}
+
+window.onload = function() {
+	var url_string = window.location.href;
+	var url = new URL(url_string);
+	var submitDireto = url.searchParams.get("submitDireto");
+	var submitDetalhado = url.searchParams.get("submitDetalhado");
+
+	if (submitDireto != null) {
+		document.getElementById("passoapassocheckbox").checked = false;
+		document.getElementById("submit").click();
+	}
+
+	if (submitDetalhado != null) {
+		document.getElementById("passoapassocheckbox").checked = true;
+		document.getElementById("submit").click();
+	}
+}
+</script>
 ';
 
 $tela->SetContent($conteudo);

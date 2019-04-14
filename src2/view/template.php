@@ -10,6 +10,8 @@ class template
 	public $projectName;
 	public $table;
 
+	public $deixarPaginaNaoVisivel;
+
 	public function SetTitle($t)
 	{
 		$this->title = $t;
@@ -42,6 +44,10 @@ class template
 
 	public function ShowTemplate()
 	{
+		if ($this->deixarPaginaNaoVisivel) {
+			$eitapreula = "visibility:hidden";
+		}
+
 	  	echo '
 			<!DOCTYPE html>
 			<html lang="pt">
@@ -55,7 +61,7 @@ class template
 			    	<link href="view/bootstrap/css/app.css" rel="stylesheet">
 				</head>
 
-			  	<body>
+			  	<body style="'.$eitapreula.'">
 						<!--navbar-->';
 						
 				require(PATH_ABS.'/meudeusdoceu/header.php');

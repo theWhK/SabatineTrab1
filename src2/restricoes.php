@@ -79,7 +79,8 @@ for ($c=1; $c <=$_SESSION['qtdevariaveis']; $c++)
 $_SESSION['restricaopadrao']=$funcao;
 $conteudo=$conteudo.$funcao;
 $conteudo=$conteudo.'<br><br>';
-$conteudo=$conteudo.'<button id="submit" name="submit" class="btn btn-primary">Solução direta</button>';
+$conteudo=$conteudo.'<button style="margin-right:10px" id="submit" name="submitDireto" class="btn btn-primary">Solução direta</button>';
+//$conteudo=$conteudo.'<button id="submit" name="submitDetalhado" class="btn btn-primary">Ver passo a passo</button>';
 $conteudo=$conteudo.'</form>';
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();
