@@ -1,6 +1,8 @@
 <body>
 <?php
 require('view/template.php');
+require_once './constants.php';
+
 
 //cria-se objeto da classe template e define a ele o titulo e o conteudo que será impresso
 $tela = new template;
@@ -8,48 +10,37 @@ $tela->SetTitle('Método Simplex');
 $tela->SetProjectName('Sabatinex');
 
 $conteudo='
-  <form class="form-horizontal" action="restricoes.php" method="GET">
-    <fieldset>
-
-      <!-- Form Name -->
-        <legend>Método Simplex - Vamos inserir os valores abaixo e calular o simplex.</legend>
-
-      <!-- Entrada de Texto -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="qtdevariaveis">Qual a quantidade de variáveis?</label>  
-          <div class="col-md-4">
-            <input id="qtdevariaveis" name="qtdevariaveis" type="number" step="0.01" placeholder="Digite o valor da variável" class="form-control input-md" required="">
-          </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 mt-5">
+            <div class="jumbotron">
+                <h1 class="display-4 text-break">Pesquisa operacional, <span class="font-weight-bold">automatizada</span>.</h1>
+                <p class="lead">O Sabatinex resolve, passo a passo, os problemas de programação linear e programação dinâmica que você precisa. </p>
+            </div>
         </div>
+    </div>
 
-      <!-- Entrada de Texto -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="qtderestricoes">E de restrições?</label>  
-          <div class="col-md-4">
-            <input id="qtderestricoes" name="qtderestricoes" type="number" step="0.01" placeholder="Digite o valor de restrições" class="form-control input-md" required="">
-          </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Programação linear</h5>
+                <p class="card-text">Usando o método Simplex, o Sabatinex está pronto para resolver problemas de PL com variáveis e restrições ilimitadas em instantes.</p>
+                <a href="'.URL_BASE.'/inicio_simplex.php" class="btn btn-primary">Calcular</a>
+            </div>
+            </div>
         </div>
-
-      <!-- Seleção do Modo Max ou Min -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="objetivo">objetivo</label>
-          <div class="col-md-4">
-            <select id="objetivo" name="objetivo" class="form-control">
-              <option value="max">Maximizar</option>
-              <option value="min">Minimizar</option>
-            </select>
-          </div>
+        <div class="col-sm-6">
+            <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Programação dinâmica</h5>
+                <p class="card-text">Resolva, rapidamente, problemas de PD (a.k.a mochila) com ilimitadas possibilidades de capacidade, valores e pesos.</p>
+                <a href="'.URL_BASE.'/mochila.html" class="btn btn-primary">Calcular</a>
+            </div>
+            </div>
         </div>
-
-      <!-- Button -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="submit"></label>
-          <div class="col-md-4">
-            <button name="submit" class="btn btn-primary btn-lg btn-block">Prosseguir</button>
-          </div>
-        </div>
-    </fieldset>
-  </form>
+    </div>
+</div>
 ';
 
 $tela->SetContent($conteudo);
