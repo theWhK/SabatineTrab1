@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a40701f7-785d-4c4e-b6eb-a285a0e562c2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src2/formapadrao.php" afterPath="$PROJECT_DIR$/src2/formapadrao.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src2/sensibilidade.php" afterPath="$PROJECT_DIR$/src2/sensibilidade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -184,7 +184,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formapadrao.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="formapadrao.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src2/formapadrao.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
@@ -199,6 +199,18 @@
                 <marker date="1555278172217" expanded="true" signature="4384:4728" ph="..." />
                 <marker date="1555278172217" expanded="true" signature="4429:4706" ph="..." />
                 <marker date="1555278172217" expanded="true" signature="4488:4604" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sensibilidade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src2/sensibilidade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+              <folding>
+                <marker date="1555278994187" expanded="true" signature="511:529" ph="..." />
               </folding>
             </state>
           </provider>
@@ -254,6 +266,7 @@
         <option value="$PROJECT_DIR$/src2/inicio_simplex.php" />
         <option value="$PROJECT_DIR$/src2/restricoes.php" />
         <option value="$PROJECT_DIR$/src2/formapadrao.php" />
+        <option value="$PROJECT_DIR$/src2/sensibilidade.php" />
       </list>
     </option>
   </component>
@@ -364,7 +377,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5040000" />
+    <option name="totallyTimeSpent" value="5774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1165,6 +1178,16 @@
             <marker date="1555278172217" expanded="true" signature="4384:4728" ph="..." />
             <marker date="1555278172217" expanded="true" signature="4429:4706" ph="..." />
             <marker date="1555278172217" expanded="true" signature="4488:4604" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src2/sensibilidade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+          <folding>
+            <marker date="1555278994187" expanded="true" signature="511:529" ph="..." />
           </folding>
         </state>
       </provider>
