@@ -175,7 +175,7 @@ for ($coluna=($_SESSION['qtdevariaveis']+1); $coluna < ($_SESSION['qtdecolunas']
 }
 
 
-$conteudo=$conteudo.'<br/><br/><h4> Se o valor de Sombra for 0, o valor minimo e máxiimo serão mostrados os valores iniciais</h4>';
+$conteudo=$conteudo.'<br/><br/><h4> Se o Valor de Sombra for 0, o valor mínimo e máximo serão mostrados pelos seus valores iniciais</h4>';
 
 //adiciona na 3 coluna da tabela preço sombra os limites minimos
 for ($linha=0; $linha <count($lmin) ; $linha++)

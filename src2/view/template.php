@@ -71,7 +71,7 @@ class template
 					
 					<div class="container theme-showcase">
 			    		<div class="row">
-			    			<div class="center">
+			    			<div class="center col-sm-12">
 			   					'.$this->GetContent().'
 			  				</div>
 			    		</div><!--row-->
