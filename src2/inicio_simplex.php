@@ -25,19 +25,20 @@ $conteudo='
   </div>
 </div>
 <div class="form-group row">
-  <label class="col-4 col-form-label" for="qtdVars">Quantidade de variáveis</label> 
+  <label class="col-4 col-form-label" for="qtdevariaveis">Quantidade de variáveis</label> 
   <div class="col-8">
-  <input id="qtdVars" name="qtdVars" type="text" class="form-control" aria-describedby="qtdVarsHelpBlock" required="required"> 
+  <input id="qtdevariaveis" name="qtdevariaveis" type="text" class="form-control" aria-describedby="qtdVarsHelpBlock" required="required"> 
   <span id="qtdVarsHelpBlock" class="form-text text-muted">A quantidade de termos que há na sua função-objetivo</span>
   </div>
 </div>
 <div class="form-group row">
-  <label for="qtdRest" class="col-4 col-form-label">Quantidade de restrições</label> 
+  <label for="qtderestricoes" class="col-4 col-form-label">Quantidade de restrições</label> 
   <div class="col-8">
-  <input id="qtdRest" name="qtdRest" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required"> 
+  <input id="qtderestricoes" name="qtderestricoes" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required"> 
   <span id="qtdRestHelpBlock" class="form-text text-muted">A quantidade de restrições que serão aplicadas no sistema</span>
   </div>
 </div> 
+<!--
 <div class="form-group row">
   <label for="qtdRest" class="col-4 col-form-label">Quantidade de iterações</label> 
   <div class="col-8">
@@ -45,18 +46,17 @@ $conteudo='
   <span id="qtdRestHelpBlock" class="form-text text-muted">A quantidade de iterações que serão realizadas</span>
   </div>
 </div> 
+-->
 <div class="form-group row">
   <div class="offset-4 col-8">
   <button name="submit" type="submit" class="btn btn-primary">Próximo passo ></button>
   </div>
 </div>
-
+<!--
     <fieldset>
 
-      <!-- Form Name -->
         <legend>Método Simplex - Vamos inserir os valores abaixo e calular o simplex.</legend>
 
-      <!-- Entrada de Texto -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="qtdevariaveis">Qual a quantidade de variáveis?</label>  
           <div class="col-md-4">
@@ -64,7 +64,6 @@ $conteudo='
           </div>
         </div>
 
-      <!-- Entrada de Texto -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="qtderestricoes">E de restrições?</label>  
           <div class="col-md-4">
@@ -72,7 +71,6 @@ $conteudo='
           </div>
         </div>
 
-      <!-- Seleção do Modo Max ou Min -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="objetivo">objetivo</label>
           <div class="col-md-4">
@@ -83,7 +81,6 @@ $conteudo='
           </div>
         </div>
 
-      <!-- Button -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="submit"></label>
           <div class="col-md-4">
@@ -91,6 +88,8 @@ $conteudo='
           </div>
         </div>
     </fieldset>
+    
+    -->
   </form>
 ';
 

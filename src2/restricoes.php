@@ -52,9 +52,9 @@ for ($l=1; $l <= $_SESSION['qtderestricoes']; $l++)
 		}else{
 			//se não acrescenta o resultado da linha
 			$conteudo=$conteudo.'
-				<select id="relacao" name="relacao'.$l.'">
+				<!--<select id="relacao" name="relacao'.$l.'">
            			<option value= "<="> <=	</option>
-				</select>
+				</select> --><span>   <=   </span>
         		<input type="number" step"0.001" name="resultado'.$l.'" size="3" maxlength="4">
 			';
 		}
