@@ -196,6 +196,3 @@ $tela->SetContent($conteudo);
 $tela->ShowTemplate();
 ?>
 
-<script type="text/javascript">
-    
-</script>
