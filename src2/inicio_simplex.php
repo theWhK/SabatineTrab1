@@ -15,7 +15,7 @@ $conteudo='
   <div class="custom-control custom-radio custom-control-inline">
       <input name="objetivo" id="objetivo_0" type="radio" class="custom-control-input" value="max" aria-describedby="objetivoHelpBlock" required="required"> 
       <label for="objetivo_0" class="custom-control-label">Maximizar</label>
-  </div> 
+  </div>
   <!-- <div class="custom-control custom-radio custom-control-inline">
       <input name="objetivo" id="objetivo_1" type="radio" class="custom-control-input" value="min" aria-describedby="objetivoHelpBlock" required="required"> 
       <label for="objetivo_1" class="custom-control-label">Minimizar</label>
