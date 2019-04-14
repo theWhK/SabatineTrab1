@@ -1,5 +1,6 @@
 <body>
 <?php
+require_once './constants.php';
 require_once('view/template.php');
 require_once('simplex.php');
 $simplex = new Simplex;

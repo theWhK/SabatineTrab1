@@ -57,25 +57,25 @@ class template
 
 			  	<body>
 			  		<!--navbar-->
-						<nav class="navbar navbar-expand-lg navbar-dark bg-info navbar-fixed-top">
-								<div class="navbar-header">
-										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-											<span class="sr-only">Toggle navigation</span>
-												<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-										</button>
-										<a class="navbar-brand" href="#">'       .$this->GetProjectName().     '</a>
-								</div>
-
-								<div id="navbar" class="collapse navbar-collapse">
-										<ul class="nav navbar-nav">
-											<li class="active"><a href="index.php">Página Inicial</a></li>
-											<li class="active"><a href="inicio_simplex.php">Prog. Linear</a></li>
-											<li class="active"><a href="mochila.html">Prog. Dinâmica</a></li>
-										</ul>
-								</div>
-				    	</nav> 
+						<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+					<a class="navbar-brand" href="'.URL_BASE.'"><strong>Sabatinex</strong></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="'.URL_BASE.'">Página inicial <span class="sr-only">(página atual)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="'.URL_BASE.'/inicio_simplex.php">Prog. Linear</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="'.URL_BASE.'/mochila.php">Prog. Dinâmica</a>
+						</li>
+						</ul>
+					</div>
+				</nav> 
 				    	<br>
 					    <br>
 					    <br>

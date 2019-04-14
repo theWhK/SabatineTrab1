@@ -19,7 +19,7 @@ Este documento provê uma visão geral da versão do aplicativo Simplex e Mochil
 
 ## LINK DE ACESSO A APLICAÇÃO ONLINE
 
-[Acessar Aplicação Simplex](http://simplex-bsi.16mb.com) ou [Mochila](http://simplex-bsi.16mb.com/mochila.html)
+[Acessar Aplicação Simplex](http://simplex-bsi.16mb.com) ou [Mochila](http://simplex-bsi.16mb.com/mochila.php)
 
 ### 1. NOTA DE RELEASE A SER PUBLICADO
 

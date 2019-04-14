@@ -1,5 +1,6 @@
 <body>
 <?php
+require_once './constants.php';
 require('view/template.php');
 require_once('simplex.php');
 $tela = new template;
