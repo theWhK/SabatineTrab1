@@ -1,0 +1,19 @@
+{
+  "name": "sabatinex",
+  "version": "1.0.0",
+  "description": "Plataforma open-source, web, que tem como objetivo prover uma interface para aprendizado sobre Pesquisa Operacional, Programação Linear e Funcional.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd laradock && docker-compose up -d nginx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theWhK/Sabatinex.git"
+  },
+  "author": "Willian Hideki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theWhK/Sabatinex/issues"
+  },
+  "homepage": "https://github.com/theWhK/Sabatinex#readme"
+}

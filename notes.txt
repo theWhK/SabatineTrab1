@@ -1,0 +1,3 @@
+Ao alternar entre "src" e "src2", vá em "/laradock/nginx/sites/default.conf"
+e altere a linha 13 (param root do server) para "/www/var/public" em "src"
+ou "/www/var" em "src2".
