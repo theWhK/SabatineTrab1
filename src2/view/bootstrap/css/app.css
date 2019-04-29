@@ -17,3 +17,28 @@
 .navbar .navbar-nav>li>a{
 	color: #FFF;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.wlices--tabela-responsiva {
+	width: 100%;
+	margin-bottom: 15px;
+	overflow-y: hidden;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 640px) {
+
+	.wlices--campo-valor {
+		width: 120px;
+	}
+	
+	.wlices--campo-valor--prepend {
+		display: block;
+	}
+}

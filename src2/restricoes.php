@@ -28,7 +28,7 @@ if ($_SESSION['objetivo']=='max')
 
 for ($i=1; $i <= $_SESSION['qtdevariaveis']; $i++)
 { 
-	$conteudo=$conteudo.'<input type="number" step="0.001" name="z'.$i.'" size="3" maxlength="4"> X<sub>'.$i.'</sub>';
+	$conteudo=$conteudo.'<span class="wlices--campo-valor--prepend"></span><input class="wlices--campo-valor" type="number" step="0.001" name="z'.$i.'" size="3" maxlength="4"> X<sub>'.$i.'</sub>';
 	if($i<$_SESSION['qtdevariaveis'])
 	{
 		$conteudo=$conteudo.' + ';
@@ -42,9 +42,10 @@ $conteudo=$conteudo.'<br><br><strong>Restrições</strong><br>';
 //L de linha   C de coluna
 for ($l=1; $l <= $_SESSION['qtderestricoes']; $l++)
 { 
+	$conteudo=$conteudo.'<div class="wlices--restricao-wrapper">';
 	for ($c=1; $c <= $_SESSION['qtdevariaveis'] ; $c++)
 	{ 
-		$conteudo=$conteudo.'<input type="number" step="0.001" name="r'.$l.'_'.$c.'" size="3" maxlength="4"> X<sub>'.$c.'</sub>';
+		$conteudo=$conteudo.'<span class="wlices--campo-valor--prepend"></span><input class="wlices--campo-valor" type="number" step="0.001" name="r'.$l.'_'.$c.'" size="3" maxlength="4"> X<sub>'.$c.'</sub>';
 		if($c<$_SESSION['qtdevariaveis'])
 		{ 
 			// se nao for a ultima coloca um ponto
@@ -55,11 +56,11 @@ for ($l=1; $l <= $_SESSION['qtderestricoes']; $l++)
 				<!--<select id="relacao" name="relacao'.$l.'">
            			<option value= "<="> <=	</option>
 				</select> --><span>   <=   </span>
-        		<input type="number" step"0.001" name="resultado'.$l.'" size="3" maxlength="4">
+        		<span class="wlices--campo-valor--prepend"></span><input class="wlices--campo-valor" type="number" step"0.001" name="resultado'.$l.'" size="3" maxlength="4">
 			';
 		}
 	}
-	$conteudo=$conteudo.'<br>';
+	$conteudo=$conteudo.'</div><br>';
 }
 $conteudo=$conteudo.'<br><br>';//espaçamento
 
