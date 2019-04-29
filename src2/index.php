@@ -2,6 +2,10 @@
 <?php
 
 require_once './constants.php';
+
+// redirect
+header('Location: '.URL_BASE.'/inicio_simplex.php'); exit();
+
 require('view/template.php');
 
 

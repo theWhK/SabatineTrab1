@@ -199,7 +199,7 @@ do{
 	{
     	$etapa++;
 		$conteudo=$conteudo.'<br><h4>Etapa '.$etapa.': Dividindo a linha inteira do pivô pelo seu próprio valor.</h4>';
-		$conteudo=$conteudo.'<br><h5> Nesta etapa,são realizadas operações para simplificar a linha inteira do pivô.</h5>';
+		$conteudo=$conteudo.'<br><h5> Nesta etapa, são realizadas operações para simplificar a linha inteira do pivô.</h5>';
 	}
 
 	$simplex->SetTabela($tabela);
@@ -211,7 +211,7 @@ do{
 	
 	for ($coluna=1; $coluna < $qtdecolunas; $coluna++)
 	{ 
-		$tabela[$LinhaDoMenor][$coluna]= round($ValoresLinha[$coluna-1],1);
+		$tabela[$LinhaDoMenor][$coluna]= $ValoresLinha[$coluna-1];
 	}
 
 	$simplex->SetTabela($tabela);
@@ -301,7 +301,8 @@ switch ($solucao)
 						<strong>Solução Ótima</strong>
 					</div>
 				</div>
-			<div class="col-lg-6"> <h4>Variáveis Basicas</h4>';
+				<div class="row">
+			<div class="col-lg-6"> <h4>Variáveis Básicas</h4>';
 
         for ($linha=1; $linha < $qtdelinhas ; $linha++)
         { 
@@ -316,7 +317,7 @@ switch ($solucao)
           	}
         }
 
-	    $conteudo=$conteudo.'</div><div class="col-lg-6"> <h4>Variáveis não Basicas</h4>';
+	    $conteudo=$conteudo.'</div><div class="col-lg-6"> <h4>Variáveis Não-Básicas</h4>';
 	  
 	    $basicas=null;
 	    $aux=0;
@@ -345,9 +346,9 @@ switch ($solucao)
      				$conteudo=$conteudo.'<p>'.$tabela[0][$i].' = 0 </p>';
      	    }
      	}
-     	$conteudo=$conteudo.'</div><br><br><div  style="text-align:center;"> <button name=button onclick="proxima();" class="btn btn-success">Análise de Sensibilidade</button></div><br><br>';
+     	$conteudo=$conteudo.'</div></div><br><br><div  style="text-align:center;"> <button name=button onclick="proxima();" class="btn btn-success">Análise de Sensibilidade</button></div><br><br>';
      	$conteudo=$conteudo.'<script>function proxima(){window.location.href="sensibilidade.php";}</script>';
-		$conteudo=$conteudo.'<script></div></div><script>alert("Solução Ótima !!!!!");</script>';
+		$conteudo=$conteudo.'<script></div></div><script>alert("Solução Ótima");</script>';
 
 		$_SESSION['tabela']=$tabela;
 	break;
@@ -369,11 +370,11 @@ switch ($solucao)
 			<div class="container">
 			 	<div class="row">
 					<div class="alert alert-info" role="alert">
-			        	<strong>Solução indeterminada !!!!!!</strong>
-			        	<strong>Dentro do limite de repetições não foi possivel positivar Z</strong>
+			        	<strong>Solução Indeterminada</strong>
+			        	<strong>Dentro do limite de repetições, não foi possivel positivar Z</strong>
 			        </div>
    				</div>
-   			</div><script>alert("Solução indeterminada !!!!!");</script>';
+   			</div><script>alert("Solução Indeterminada");</script>';
    	break;
 
 	default:
@@ -393,10 +394,10 @@ switch ($solucao)
 			<div class="container">
 			 	<div class="row">
 					<div class="alert alert-danger" role="alert">
-			        	<strong>Solução impossivel !!!!!!!!!</strong>
+			        	<strong>Solução impossivel</strong>
 			        </div>
    				</div>
-   			</div><script>alert("Solução impossivel !!!!!");</script>';
+   			</div><script>alert("Solução impossivel");</script>';
 	break;
 }
 
