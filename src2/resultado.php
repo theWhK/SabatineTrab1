@@ -225,14 +225,14 @@ do{
 	{
 		//anular
 		$etapa++;
-		$conteudo=$conteudo.'<h4>Etapa '.$etapa.': Anulando os elementos da coluna do pivo </h4>';
+		$conteudo=$conteudo.'<h4>Etapa '.$etapa.': Anulando os elementos da coluna do pivô </h4>';
 	}
 	$simplex->SetTabela($tabela);
 	$_SESSION['tabelafinal'] = $tabela;
 
 	if ($passoapasso=='S')
 	{			
-		$conteudo=$conteudo.'<h5>Foram anulados da colunas do pivo os numeros Ignorando o próprio pivo e os zeros. </h5>';
+		$conteudo=$conteudo.'<h5>Foram anulados os números das colunas do pivô, ignorando o próprio pivô e os zeros. </h5>';
 		$conteudo=$conteudo.$simplex->MostraTabela('6',$qtdecolunas,$qtdelinhas);
 	}
 

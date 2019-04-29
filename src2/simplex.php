@@ -19,7 +19,7 @@ class Simplex
 		}else{
 			$conteudo=$conteudo.'<div class="col-lg-6">';
 		}
-		$conteudo=$conteudo.'<table class="table table-bordered"><thead><tr>';
+		$conteudo=$conteudo.'<div class="wlices--tabela-responsiva"><table class="table table-bordered"><thead><tr>';
 
 		//cabeçalho              
 		for ($c=0; $c <$qtdecolunas ; $c++)
@@ -50,7 +50,7 @@ class Simplex
 			}
 		}
 		$conteudo=$conteudo.'</tbody>';
-		$conteudo=$conteudo.'</table>';
+		$conteudo=$conteudo.'</table></div>';
 		$conteudo=$conteudo.'</div>';
 		if($tamanho==12)
 		{
