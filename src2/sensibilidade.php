@@ -201,7 +201,7 @@ for ($linha=0; $linha <$_SESSION['qtdelinhas'] ; $linha++)
 }
 
 $conteudo=$conteudo.'<div class="row"><div class="col-lg-12">';
-$conteudo=$conteudo.'<table class="table table-bordered"><thead><tr>';
+$conteudo=$conteudo.'<div class="wlices--tabela-responsiva"><table class="table table-bordered"><thead><tr>';
 $conteudo=$conteudo.'<th>Recursos</th>';
 $conteudo=$conteudo.'<th>Preço Sombra</th>';
 $conteudo=$conteudo.'<th>Limite Mínimo</th>';
@@ -210,15 +210,21 @@ $conteudo=$conteudo.'<th>Valor Inicial (B)</th>';
 $conteudo=$conteudo.'</tr></thead>';
 $conteudo=$conteudo.'<tbody>';
 
+
 for ($l=0; $l <= 4 ; $l++) 
 {
   $conteudo=$conteudo.'<tr>'; 
   for ($c=0; $c < $_SESSION['qtdecolunas'] ; $c++) 
-  { 
+  {
+
     if (isset($tabelaprecosombra[$l][$c]))
     {
       if(trim($tabelaprecosombra[$l][$c])!='')
       {
+        if ($c == 1 && $tabelaprecosombra[$l][$c] == 0){
+          $tabelaprecosombra[$l][3] = 'Infinito';
+        }
+
         $conteudo=$conteudo.'<td>'.$tabelaprecosombra[$l][$c].'</td>';
       }
     }
@@ -227,7 +233,7 @@ for ($l=0; $l <= 4 ; $l++)
 
 $conteudo=$conteudo.'</tbody>';  
 $conteudo=$conteudo.'</tbody>';
-$conteudo=$conteudo.'</table>';
+$conteudo=$conteudo.'</table></div>';
 $conteudo=$conteudo.'</div>';
 $conteudo=$conteudo.'<br><br>';
 
