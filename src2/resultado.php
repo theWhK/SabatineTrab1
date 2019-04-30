@@ -267,7 +267,7 @@ do{
 		$solucao=0;
 		break;
 	}else{
-		if ($qtderepeticoes==10)
+		if ($qtderepeticoes==100)
 		{
 			$solucao=1;
 			break;
@@ -275,7 +275,7 @@ do{
 	}
 	$qtderepeticoes++;
 	$etapa =0;
-}while($qtderepeticoes<=2);
+}while($qtderepeticoes<=100);
 
 $basicas= array();
 
