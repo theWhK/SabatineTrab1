@@ -11,8 +11,9 @@ $tela->SetProjectName('Sabatinex');
 $conteudo='
   <form class="form-horizontal" action="restricoes.php" method="GET">
   <div class="form-group row">
-  <label class="col-4">Objetivo</label> 
-  <div class="col-8">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+  <span id="objetivoHelpBlock" class="form-text text-muted">Qual a intenção do sistema com as variáveis?</span>
   <div class="custom-control custom-radio custom-control-inline">
       <input name="objetivo" id="objetivo_0" type="radio" class="custom-control-input" value="max" aria-describedby="objetivoHelpBlock" required="required"> 
       <label for="objetivo_0" class="custom-control-label">Maximizar</label>
@@ -21,32 +22,32 @@ $conteudo='
       <input name="objetivo" id="objetivo_1" type="radio" class="custom-control-input" value="min" aria-describedby="objetivoHelpBlock" required="required"> 
       <label for="objetivo_1" class="custom-control-label">Minimizar</label>
   </div>
-  <span id="objetivoHelpBlock" class="form-text text-muted">Qual a intenção do sistema com as variáveis?</span>
   </div>
 </div>
 <div class="form-group row">
-  <label class="col-4 col-form-label" for="qtdevariaveis">Quantidade de variáveis</label> 
-  <div class="col-8">
-  <input id="qtdevariaveis" name="qtdevariaveis" type="text" class="form-control" aria-describedby="qtdVarsHelpBlock" required="required"> 
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
   <span id="qtdVarsHelpBlock" class="form-text text-muted">A quantidade de termos que há na sua função-objetivo</span>
+  <input id="qtdevariaveis" name="qtdevariaveis" type="text" class="form-control" aria-describedby="qtdVarsHelpBlock" required="required" placeholder="Quantidade de variáveis"> 
   </div>
 </div>
 <div class="form-group row">
-  <label for="qtderestricoes" class="col-4 col-form-label">Quantidade de restrições</label> 
-  <div class="col-8">
-  <input id="qtderestricoes" name="qtderestricoes" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required"> 
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
   <span id="qtdRestHelpBlock" class="form-text text-muted">A quantidade de restrições que serão aplicadas no sistema</span>
+  <input id="qtderestricoes" name="qtderestricoes" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required" placeholder="Quantidade de restrições"> 
   </div>
 </div> 
 <div class="form-group row">
-  <label for="qtdRest" class="col-4 col-form-label">Quantidade de iterações</label> 
-  <div class="col-8">
-  <input id="qtdrest" name="qtdrest" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required"> 
-  <span id="qtdRestHelpBlock" class="form-text text-muted">A quantidade de iterações que serão realizadas</span>
+<div class="col-md-2"></div>
+  <div class="col-md-8">
+    <span id="qtdRestHelpBlock" class="form-text text-muted">A quantidade de iterações que serão realizadas</span>
+    <input id="qtdRest" name="qtdRest" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required" placeholder="Máximo de loops (máx. 100)"> 
   </div>
 </div> 
 <div class="form-group row">
-  <div class="offset-4 col-8">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
   <button name="submit" type="submit" class="btn btn-primary">Próximo passo ></button>
   </div>
 </div>

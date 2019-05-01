@@ -15,6 +15,9 @@ if (isset($_GET['qtdevariaveis']) and isset($_GET['qtderestricoes']) and isset($
 	$_SESSION['objetivo'] = $_GET['objetivo'];
 }
 
+$conteudo=$conteudo.'<div class="row"><div class="col-md-2"></div>';
+$conteudo=$conteudo.'<div class="col-md-8">';
+
 $conteudo=$conteudo.'<strong>Função Objetiva</strong><br>';
 
 //Monta Z = .......
@@ -83,6 +86,7 @@ $conteudo=$conteudo.'<br><br>';
 $conteudo=$conteudo.'<button style="margin-right:10px" id="submit" name="submitDireto" class="btn btn-primary">Solução direta</button>';
 //$conteudo=$conteudo.'<button id="submit" name="submitDetalhado" class="btn btn-primary">Ver passo a passo</button>';
 $conteudo=$conteudo.'</form>';
+$conteudo=$conteudo.'</div></div>';
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();
 ?>
