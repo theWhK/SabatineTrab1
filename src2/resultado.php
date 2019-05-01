@@ -13,12 +13,17 @@ $tabela = array();
 $linhaZ = array();
 $conteudo='';
 $qtderepeticoes=1;
+$limite_repeticoes = $_SESSION['qtdrest'];
 $qtdecolunas = $_SESSION['qtdevariaveis'] + $_SESSION['qtderestricoes'] +2 ;	
 $qtdelinhas = $_SESSION['qtderestricoes'] + 2;
 $solucao = 0 ;
 //0 - otima
 //1 - indeterminada
 //2 - impossivel
+
+if (empty($qtderepeticoes) || $qtderepeticoes > 100) {
+	$qtderepeticoes = 100;
+}
 
 $passoapasso=$_GET['passoapasso'];
 
@@ -267,7 +272,7 @@ do{
 		$solucao=0;
 		break;
 	}else{
-		if ($qtderepeticoes==100)
+		if ($qtderepeticoes==$limite_repeticoes)
 		{
 			$solucao=1;
 			break;
@@ -275,7 +280,7 @@ do{
 	}
 	$qtderepeticoes++;
 	$etapa =0;
-}while($qtderepeticoes<=100);
+}while($qtderepeticoes<=$limite_repeticoes);
 
 $basicas= array();
 

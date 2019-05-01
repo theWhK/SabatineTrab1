@@ -18,10 +18,10 @@ $conteudo='
       <input name="objetivo" id="objetivo_0" type="radio" class="custom-control-input" value="max" aria-describedby="objetivoHelpBlock" required="required"> 
       <label for="objetivo_0" class="custom-control-label">Maximizar</label>
   </div>
-  <!-- <div class="custom-control custom-radio custom-control-inline">
+  <div class="custom-control custom-radio custom-control-inline">
       <input name="objetivo" id="objetivo_1" type="radio" class="custom-control-input" value="min" aria-describedby="objetivoHelpBlock" required="required"> 
       <label for="objetivo_1" class="custom-control-label">Minimizar</label>
-  </div>  -->
+  </div>
   </div>
 </div>
 <div class="form-group row">
@@ -38,15 +38,13 @@ $conteudo='
   <input id="qtderestricoes" name="qtderestricoes" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required" placeholder="Quantidade de restrições"> 
   </div>
 </div> 
-<!--
 <div class="form-group row">
 <div class="col-md-2"></div>
   <div class="col-md-8">
-  <span id="qtdRestHelpBlock" class="form-text text-muted">A quantidade de iterações que serão realizadas</span>
-  <input id="qtdRest" name="qtdRest" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required" placeholder="Máximo de loops (máx. 100)"> 
+    <span id="qtdRestHelpBlock" class="form-text text-muted">A quantidade de iterações que serão realizadas</span>
+    <input id="qtdRest" name="qtdRest" type="text" class="form-control" aria-describedby="qtdRestHelpBlock" required="required" placeholder="Máximo de loops (máx. 100)"> 
   </div>
 </div> 
--->
 <div class="form-group row">
   <div class="col-md-2"></div>
   <div class="col-md-8">
