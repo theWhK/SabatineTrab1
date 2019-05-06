@@ -3,9 +3,6 @@
 
 require_once './constants.php';
 
-// redirect
-header('Location: '.URL_BASE.'/inicio_simplex.php'); exit();
-
 require('view/template.php');
 
 
@@ -48,6 +45,16 @@ $conteudo='
     </div>
 </div>
 ';
+
+$conteudo = $conteudo .
+	'
+<script>
+window.onload = function() {
+    localStorage.clear();
+}
+</script>
+';
+
 
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();

@@ -92,6 +92,31 @@ $conteudo='
   </form>
 ';
 
+
+$conteudo = $conteudo .
+	'
+<script>
+window.onload = function() {
+	var item = localStorage.getItem(\'inicio_simplex\');
+	item = JSON.parse(item);
+
+    $(\'#qtdevariaveis\').val(item.qtdevariaveis);
+    $(\'#qtderestricoes\').val(item.qtderestricoes);
+    $(\'#qtdRest\').val(item.qtdRest);
+    
+    if (item.objetivo == \'max\') {
+    	$(\'#objetivo_0\').attr(\'checked\', true);
+    }
+    
+    if (item.objetivo == \'min\') {
+    	$(\'#objetivo_1\').attr(\'checked\', true);
+    }
+
+}
+</script>
+';
+
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();
 ?>
+

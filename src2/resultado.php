@@ -406,6 +406,16 @@ switch ($solucao)
 	break;
 }
 
+
+$conteudo = $conteudo .
+	'
+<script>
+window.onload = function() {
+    localStorage.clear();
+}
+</script>
+';
+
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();
 ?>

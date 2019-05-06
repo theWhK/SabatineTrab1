@@ -13,6 +13,7 @@ if (isset($_GET['qtdevariaveis']) and isset($_GET['qtderestricoes']) and isset($
 	$_SESSION['qtdevariaveis'] = $_GET['qtdevariaveis'];
 	$_SESSION['qtderestricoes'] = $_GET['qtderestricoes'];
 	$_SESSION['objetivo'] = $_GET['objetivo'];
+	$_SESSION['qtdRest'] = $_GET['qtdRest'];
 }
 
 $conteudo=$conteudo.'<div class="row"><div class="col-md-2"></div>';
@@ -83,10 +84,32 @@ for ($c=1; $c <=$_SESSION['qtdevariaveis']; $c++)
 $_SESSION['restricaopadrao']=$funcao;
 $conteudo=$conteudo.$funcao;
 $conteudo=$conteudo.'<br><br>';
+$conteudo=$conteudo.'<a href="'.URL_BASE.'/inicio_simplex.php" type="button" style="margin-right:10px; background-color: #aaaaaa; border-color: #aaaaaa;" id="voltar" name="voltar" class="btn btn-primary">Voltar</a>';
 $conteudo=$conteudo.'<button style="margin-right:10px" id="submit" name="submitDireto" class="btn btn-primary">Solução direta</button>';
 //$conteudo=$conteudo.'<button id="submit" name="submitDetalhado" class="btn btn-primary">Ver passo a passo</button>';
 $conteudo=$conteudo.'</form>';
 $conteudo=$conteudo.'</div></div>';
+
+$conteudo = $conteudo .
+	'
+<script>
+window.onload = function() {
+    var item = {
+        objetivo: "'.$_SESSION['objetivo'].'",
+        qtdevariaveis: "'.$_SESSION['qtdevariaveis'].'",
+        qtderestricoes: "'.$_SESSION['qtderestricoes'].'",
+        qtdRest: "'.$_SESSION['qtdRest'].'"
+    };
+	
+	item = JSON.stringify(item);
+
+    localStorage.setItem(\'inicio_simplex\', item);
+}
+</script>
+';
+
+
+
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();
 ?>
