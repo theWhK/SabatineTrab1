@@ -1,5 +1,8 @@
 <?php
-require 'constants.php'
+require 'constants.php';
+
+// redirect
+header('Location: '.URL_BASE); exit();
 ?>
 
 <!doctype html>
