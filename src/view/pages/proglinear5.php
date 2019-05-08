@@ -4,7 +4,7 @@ require_once('view/template.php');
 require_once(PATH_ABS.'/core/isoide-imasu/simplex.php');
 $tela = new template;
 $simplex = new Simplex;
-$tela->SetTitle('Método Simplex');
+$tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
 $conteudo='';
 session_start();
