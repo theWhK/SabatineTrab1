@@ -4,4 +4,4 @@
 define('PATH_ABS', __DIR__);
 
 // URL base
-define('URL_BASE', 'http://localhost:1337');
+define('URL_BASE', 'http://localhost:81');
