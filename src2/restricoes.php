@@ -86,7 +86,7 @@ $conteudo=$conteudo.$funcao;
 $conteudo=$conteudo.'<br><br>';
 $conteudo=$conteudo.'<a href="'.URL_BASE.'/inicio_simplex.php" type="button" style="margin-right:10px; background-color: #aaaaaa; border-color: #aaaaaa;" id="voltar" name="voltar" class="btn btn-primary">Voltar</a>';
 $conteudo=$conteudo.'<button style="margin-right:10px" id="submit" name="submitDireto" class="btn btn-primary">Solução direta</button>';
-//$conteudo=$conteudo.'<button id="submit" name="submitDetalhado" class="btn btn-primary">Ver passo a passo</button>';
+$conteudo=$conteudo.'<button id="submit" name="submitDetalhado" class="btn btn-primary">Ver passo a passo</button>';
 $conteudo=$conteudo.'</form>';
 $conteudo=$conteudo.'</div></div>';
 
