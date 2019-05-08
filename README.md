@@ -104,8 +104,9 @@ Tecnologias | Ferramentas
 --------- | ------
 Front-End     | HTML, ECMAScript, jQuery
 Back-End    | PHP
-Framework WEB    | Bootstrap
+Framework Web    | Bootstrap
 Editor de Texto  | VS Code, IntelliJ IDEA
+Servidor Local  | Laradock
 Servidor Web    | https://github.io/
 
 ## Atividades Realizadas no Período
