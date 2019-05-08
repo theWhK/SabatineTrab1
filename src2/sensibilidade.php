@@ -202,7 +202,7 @@ for ($linha=0; $linha <$_SESSION['qtdelinhas'] ; $linha++)
 
 $conteudo=$conteudo.'<div class="row"><div class="col-lg-12">';
 $conteudo=$conteudo.'<div class="wlices--tabela-responsiva"><table class="table table-bordered"><thead><tr>';
-$conteudo=$conteudo.'<th>Recursos</th>';
+$conteudo=$conteudo.'<th>Variáveis</th>';
 $conteudo=$conteudo.'<th>Preço Sombra</th>';
 $conteudo=$conteudo.'<th>Limite Mínimo</th>';
 $conteudo=$conteudo.'<th>Limite Máximo</th>';
