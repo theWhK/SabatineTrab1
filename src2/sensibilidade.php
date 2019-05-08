@@ -16,7 +16,7 @@ $qtdecolunas = $_SESSION['qtdecolunas'];
 $tabelainicial = $_SESSION['tabelainicial'];
 $tabelafinal = $_SESSION['tabelafinal'];
 
-$conteudo=$conteudo.'<h1 style="text-align:center;" ><strong> Análise de Sensibilidade</strong></h1><br>';
+$conteudo=$conteudo.'<h1><strong> Análise de Sensibilidade</strong></h1><hr>';
 $conteudo=$conteudo.'<h3><strong>Tabela Inicial</strong></h1><br>';
 
 //define qual tabela vai ser impressa
