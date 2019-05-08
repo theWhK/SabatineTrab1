@@ -95,7 +95,7 @@ Datas | Eventos
 
 Requisitos | Ferramentas
 --------- | ------
-Navegadores     | Mozila Firefox, Chrome, Edge, Opera
+Navegadores     | Firefox, Chrome, Edge, Opera
 Sistema Operacional    | Ubuntu, Windows, Mac
 
 ## Tecnologias
