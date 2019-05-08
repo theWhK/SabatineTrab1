@@ -116,10 +116,8 @@ Código | Título | Tarefa | Situação | Observação
 --------- | ------ | -------| -------| -------
 1 | Maximizar | Montar a Tabela Simplex, e possibilitar o usuário a maximizar modelos de simplex com sistemas lineares. | Concluído | Apenas restrições de “<=”
 2 | Minimizar | Montar a Tabela Simplex, e possibilitar o usuário a minimizar modelos de simplex com sistemas lineares. | Concluído | Apenas restrições de “<=”
-3 | Adição de restrições | Possibilitar o usuário a adicionar inputs para maiores números de restrições. | Concluído |
-4 | Remoção de restrições | Possibilitar o usuário a remover inputs para menores números de restrições. | Concluído |
-5 | Demonstrar passo a passo | Demonstrar ao usuário as alterações na tabela causada pelas iterações do método simplex. | Em desenvolvimento|
-6  | Tabela de sensibilidade | Demonstrar ao usuário a tabela de sensibilidade. |Em desenvolvimento|
+3 | Demonstrar passo a passo | Demonstrar ao usuário as alterações na tabela causada pelas iterações do método simplex. | Em desenvolvimento|
+4  | Tabela de sensibilidade | Demonstrar ao usuário a tabela de sensibilidade. |Em desenvolvimento|
 
 ### Mochila
 
