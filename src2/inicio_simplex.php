@@ -10,9 +10,20 @@ $tela->SetProjectName('Sabatinex');
 
 $conteudo='
   <form class="form-horizontal" action="restricoes.php" method="GET">
+  
   <div class="form-group row">
+  
   <div class="col-md-2"></div>
   <div class="col-md-8">
+    <div >
+    <h1>Programação Linear</h1>
+    <p>
+        Faça aqui o cálculo de Programação Linear pelo método Simplex. A quantidade de variáveis e restrições é ilimitada,
+        ao contrário das inequações, que são limitadas para menor ou igual.
+    </p>
+    <hr>
+    </div>
+
   <span id="objetivoHelpBlock" class="form-text text-muted">Qual a intenção do sistema com as variáveis?</span>
   <div class="custom-control custom-radio custom-control-inline">
       <input name="objetivo" id="objetivo_0" type="radio" class="custom-control-input" value="max" aria-describedby="objetivoHelpBlock" required="required"> 

@@ -17,7 +17,13 @@ if (isset($_GET['qtdevariaveis']) and isset($_GET['qtderestricoes']) and isset($
 }
 
 $conteudo=$conteudo.'<div class="row"><div class="col-md-2"></div>';
-$conteudo=$conteudo.'<div class="col-md-8">';
+$conteudo=$conteudo.'
+    <div class="col-md-8">
+    <div >
+        <h1>Programação Linear</h1>
+        <hr>
+    </div>
+    ';
 
 $conteudo=$conteudo.'<strong>Função Objetiva</strong><br>';
 
