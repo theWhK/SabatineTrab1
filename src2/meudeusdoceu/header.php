@@ -11,9 +11,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?=URL_BASE?>/inicio_simplex.php">Prog. Linear</a>
             </li>
-            <!--li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="<?=URL_BASE?>/mochila.php">Prog. Dinâmica</a>
-            </li-->
+            </li>
         </ul>
     </div>
 </nav> 
