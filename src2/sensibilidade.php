@@ -80,23 +80,7 @@ $conteudo=$conteudo.'<h3><strong>Preço Sombra</strong></h1><br>';
 $conteudo=$conteudo.'<p>O preço sombra é a taxa de variáção da função objetiva (Z) para uma alteração a disponibilidade de recursos.</p>';
 $conteudo=$conteudo.'<p><strong>Isto é :</strong> refere-se a quantidade que o lucro total (Z) poderia ser melhorado caso a quantidade do recurso seja igual a 1</p><br><br>';
 
-$tabelaprecosombra=array();
-$aux=0;
 
-//preenche as 2 primeiras colunas da tabela preço sombra
-$recursos=array();
-$resultadorecurso=array();
-for ($coluna=0; $coluna < $qtdecolunas ; $coluna++)
-{ 
-  if(trim(strtoupper(substr($tabelafinal[0][$coluna],0,1)))=='F')
-  {
-    $tabelaprecosombra[$aux][0]=$tabelafinal[0][$coluna];
-    array_push($recursos, $tabelafinal[0][$coluna]);
-    $tabelaprecosombra[$aux][1]=$tabelafinal[$_SESSION['qtdelinhas']-1][$coluna];
-    array_push($resultadorecurso, $tabelafinal[$_SESSION['qtdelinhas']-1][$coluna]);
-    $aux++;
-  }
-}
 
 $deltas = array();
 $lmin = array();
@@ -177,36 +161,73 @@ for ($coluna=($_SESSION['qtdevariaveis']+1); $coluna < ($_SESSION['qtdecolunas']
 
 $conteudo=$conteudo.'<br/><br/><h4> Se o Valor de Sombra for 0, o valor mínimo e máximo serão mostrados pelos seus valores iniciais</h4>';
 
-//adiciona na 3 coluna da tabela preço sombra os limites minimos
-for ($linha=0; $linha <count($lmin) ; $linha++)
-{ 
-  $tabelaprecosombra[$linha][2] = $lmin[$linha];
+
+
+
+
+$tabelaprecosombra=array();
+$aux=0;
+//preenche as 2 primeiras colunas da tabela preço sombra
+$recursos=array();
+$resultadorecurso=array();
+for ($coluna=0; $coluna < $qtdecolunas ; $coluna++)
+{
+	if(trim(strtoupper(substr($tabelafinal[0][$coluna],0,1)))=='F')
+	{
+		$tabelaprecosombra[$aux][0]=$tabelafinal[0][$coluna];
+		array_push($recursos, $tabelafinal[0][$coluna]);
+		$tabelaprecosombra[$aux][2]=$tabelafinal[$_SESSION['qtdelinhas']-1][$coluna];
+		array_push($resultadorecurso, $tabelafinal[$_SESSION['qtdelinhas']-1][$coluna]);
+		$aux++;
+	}
+
+//	if(trim(strtoupper(substr($tabelafinal[0][$coluna],0,1)))=='X')
+//	{
+//		$tabelaprecosombra[$aux][0]=$tabelafinal[0][$coluna];
+//		array_push($recursos, $tabelafinal[0][$coluna]);
+//		$tabelaprecosombra[$aux][2]=$tabelafinal[$_SESSION['qtdelinhas']-1][$coluna];
+//		array_push($resultadorecurso, $tabelafinal[$_SESSION['qtdelinhas']-1][$coluna]);
+//		$aux++;
+//	}
 }
 
-//adiciona na 4 coluna da tabela preço sombra os limites maximos
+
+//adiciona na coluna 4 da tabela preco sombra os valores de B,  caso a linha seja um F
+$aux =0;
+for ($linha=0; $linha <$_SESSION['qtdelinhas'] ; $linha++)
+{
+	if ((substr(strtoupper(trim($tabelainicial[$linha][0])),0,1)=='F'))
+	{
+		$tabelaprecosombra[$aux][1] = $tabelainicial[$linha][$qtdecolunas-1];
+		$aux++;
+	}
+
+//	if ((substr(strtoupper(trim($tabelainicial[$linha][0])),0,1)=='X'))
+//	{
+//		$tabelaprecosombra[$aux][1] ='-';
+//		$aux++;
+//	}
+}
+
+//adiciona na 3 coluna da tabela preço sombra os limites maximos
 for ($linha=0; $linha <count($lmax) ; $linha++)
 { 
   $tabelaprecosombra[$linha][3] = $lmax[$linha];
 }
 
-//adiciona na ultima coluna da tabela preco sombra os valores de B,  caso a linha seja um F
-$aux =0;
-for ($linha=0; $linha <$_SESSION['qtdelinhas'] ; $linha++)
-{ 
-  if ((substr(strtoupper(trim($tabelainicial[$linha][0])),0,1)=='F'))
-  {
-      $tabelaprecosombra[$aux][4] = $tabelainicial[$linha][$qtdecolunas-1];
-      $aux++;
-  }
+//adiciona na 5 coluna da tabela preço sombra os limites minimos
+for ($linha=0; $linha <count($lmin) ; $linha++)
+{
+	$tabelaprecosombra[$linha][4] = $lmin[$linha];
 }
 
 $conteudo=$conteudo.'<div class="row"><div class="col-lg-12">';
 $conteudo=$conteudo.'<div class="wlices--tabela-responsiva"><table class="table table-bordered"><thead><tr>';
-$conteudo=$conteudo.'<th>Recursos</th>';
-$conteudo=$conteudo.'<th>Preço Sombra</th>';
-$conteudo=$conteudo.'<th>Limite Mínimo</th>';
-$conteudo=$conteudo.'<th>Limite Máximo</th>';
+$conteudo=$conteudo.'<th>Variável</th>';
 $conteudo=$conteudo.'<th>Valor Inicial (B)</th>';
+$conteudo=$conteudo.'<th>Preço Sombra</th>';
+$conteudo=$conteudo.'<th>Limite Máximo</th>';
+$conteudo=$conteudo.'<th>Limite Mínimo</th>';
 $conteudo=$conteudo.'</tr></thead>';
 $conteudo=$conteudo.'<tbody>';
 
@@ -221,7 +242,7 @@ for ($l=0; $l <= 4 ; $l++)
     {
       if(trim($tabelaprecosombra[$l][$c])!='')
       {
-        if ($c == 1 && $tabelaprecosombra[$l][$c] == 0){
+        if ($c == 2 && $tabelaprecosombra[$l][$c] == 0){
           $tabelaprecosombra[$l][3] = 'Infinito';
         }
 
@@ -239,4 +260,11 @@ $conteudo=$conteudo.'<br><br>';
 
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();
+
+echo '<pre>';
+print_r($_SESSION['qtdelinhas']);
+print_r($tabelaprecosombra);
+print_r($_SESSION);
+echo '</pre>';
+exit;
 ?>
