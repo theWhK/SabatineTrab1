@@ -2,7 +2,7 @@
 <?php
 require('view/template.php');
 $tela = new template;
-$tela->SetTitle('Método Simplex');
+$tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
 session_start();
 

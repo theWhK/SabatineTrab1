@@ -5,7 +5,7 @@ require('view/template.php');
 $tela = new template;
 $tela->deixarPaginaNaoVisivel = true;
 session_start();
-$tela->SetTitle('Método Simplex');
+$tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
 
 $conteudo='<h1 style="text-align:center;">Forma Padrão</h1>';

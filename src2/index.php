@@ -9,7 +9,7 @@ require('view/template.php');
 
 //cria-se objeto da classe template e define a ele o titulo e o conteudo que será impresso
 $tela = new template;
-$tela->SetTitle('Método Simplex');
+$tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
 
 $conteudo='
@@ -33,7 +33,7 @@ $conteudo='
             </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <!--div class="col-sm-6">
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Programação dinâmica</h5>
@@ -41,7 +41,7 @@ $conteudo='
                 <a href="'.URL_BASE.'/mochila.php" class="btn btn-primary">Calcular</a>
             </div>
             </div>
-        </div>
+        </div-->
     </div>
 </div>
 ';

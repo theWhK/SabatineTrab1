@@ -5,7 +5,8 @@ require_once('view/template.php');
 require_once('simplex.php');
 $simplex = new Simplex;
 $tela = new template;
-$tela->SetTitle('Método Simplex');
+$tela->deixarPaginaNaoVisivel = true; 
+$tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
 session_start();
 $etapa = 0;
@@ -414,6 +415,13 @@ $conteudo = $conteudo .
 window.onload = function() {
     localStorage.clear();
 }
+</script>
+';
+
+$conteudo = $conteudo .
+'
+<script>
+window.onload = proxima();
 </script>
 ';
 
