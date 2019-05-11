@@ -384,26 +384,27 @@ switch ($solucao)
    	break;
 
 	default:
-		if ($passoapasso!='S')
-		{
-			$simplex->SetTabela($_SESSION['tabelainicial']);
-			$conteudo=$conteudo.'<h1>Tabela Inicial</h1>';
-			$conteudo=$conteudo.$simplex->MostraTabela('12',$qtdecolunas,$qtdelinhas);
-			$conteudo=$conteudo.'<br><hr><br>';
-			$simplex->SetTabela($_SESSION['tabelafinal']);
-			$conteudo=$conteudo.'<h1>Tabela Final</h1>';
-			$conteudo=$conteudo.$simplex->MostraTabela('12',$qtdecolunas,$qtdelinhas);
-			$conteudo=$conteudo.'<br><hr><br>';
-		}
+//		if ($passoapasso!='S')
+//		{
+//			$simplex->SetTabela($_SESSION['tabelainicial']);
+//			$conteudo=$conteudo.'<h1>Tabela Inicial</h1>';
+//			$conteudo=$conteudo.$simplex->MostraTabela('12',$qtdecolunas,$qtdelinhas);
+//			$conteudo=$conteudo.'<br><hr><br>';
+//			$simplex->SetTabela($_SESSION['tabelafinal']);
+//			$conteudo=$conteudo.'<h1>Tabela Final</h1>';
+//			$conteudo=$conteudo.$simplex->MostraTabela('12',$qtdecolunas,$qtdelinhas);
+//			$conteudo=$conteudo.'<br><hr><br>';
+//		}
 
 		$conteudo=$conteudo.'
-			<div class="container">
-			 	<div class="row">
-					<div class="alert alert-danger" role="alert">
-			        	<strong>Solução impossivel</strong>
-			        </div>
-   				</div>
-   			</div><script>alert("Solução impossivel");</script>';
+//			<div class="container">
+//			 	<div class="row">
+//					<div class="alert alert-danger" role="alert">
+//			        	<strong>Solução impossivel</strong>
+//			        </div>
+//   				</div>
+//   			</div>
+   			<script>window.location.href=\'/sem_solucao.php\'</script>';
 	break;
 }
 
