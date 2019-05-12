@@ -81,6 +81,7 @@ Datas | Eventos
 08/05/19    | Correções para MVP 2.1
 08/05/19    | Implementação de Nova AS para MVP 3
 08/05/19    | Atualização do README
+12/05/19    | Ajustes para MVP 3
 
 
 ### Mochila
