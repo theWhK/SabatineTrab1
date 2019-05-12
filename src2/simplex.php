@@ -8,7 +8,7 @@ class Simplex
 		$this->tabela=$t;
 	}
 
-	public function MostraTabela($tamanho,$qtdecolunas,$qtdelinhas)
+	public function MostraTabela($tamanho,$qtdecolunas,$qtdelinhas,$attrName='none')
 	{
 		$_SESSION['qtdelinhas']=$qtdelinhas;
 		$_SESSION['qtdecolunas']=$qtdecolunas;
@@ -19,7 +19,7 @@ class Simplex
 		}else{
 			$conteudo=$conteudo.'<div class="col-lg-6">';
 		}
-		$conteudo=$conteudo.'<div class="wlices--tabela-responsiva"><table class="table table-bordered"><thead><tr>';
+		$conteudo=$conteudo.'<div class="wlices--tabela-responsiva" data-table-name="'.$attrName.'"><table class="table table-bordered"><thead><tr>';
 
 		//cabeçalho              
 		for ($c=0; $c <$qtdecolunas ; $c++)

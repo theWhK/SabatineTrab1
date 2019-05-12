@@ -23,10 +23,10 @@ $conteudo=$conteudo.'<h3><strong>Tabela Inicial</strong></h1><br>';
 $simplex->SetTabela($tabelainicial);
 
 //imprimi
-$conteudo=$conteudo.$simplex->MostraTabela('12',$qtdecolunas,$qtdelinhas);
+$conteudo=$conteudo.$simplex->MostraTabela('12',$qtdecolunas,$qtdelinhas,'tabelaInicial');
 $conteudo=$conteudo.'<h3><strong>Tabela Final</strong></h1><br>';
 $simplex->SetTabela($tabelafinal);
-$conteudo=$conteudo.$simplex->MostraTabela('12',$qtdecolunas,$qtdelinhas);
+$conteudo=$conteudo.$simplex->MostraTabela('12',$qtdecolunas,$qtdelinhas,'tabelaFinal');
 
 
 $conteudo=$conteudo.'<h3><strong>Qual a interpretação do quadro final?</strong></h1><br>';
@@ -159,9 +159,7 @@ for ($coluna=($_SESSION['qtdevariaveis']+1); $coluna < ($_SESSION['qtdecolunas']
 }
 
 
-$conteudo=$conteudo.'<br/><br/><h4> Se o Valor de Sombra for 0, o valor mínimo e máximo serão mostrados pelos seus valores iniciais</h4>';
-
-
+$conteudo=$conteudo.'<br/><br/><h5> Se o Valor de Sombra for 0, o valor mínimo e máximo serão mostrados pelos seus valores iniciais</h5>';
 
 
 
@@ -222,7 +220,7 @@ for ($linha=0; $linha <count($lmin) ; $linha++)
 }
 
 $conteudo=$conteudo.'<div class="row"><div class="col-lg-12">';
-$conteudo=$conteudo.'<div class="wlices--tabela-responsiva"><table class="table table-bordered"><thead><tr>';
+$conteudo=$conteudo.'<div class="wlices--tabela-responsiva" data-table-name="sensibilidadePreview"><table class="table table-bordered"><thead><tr>';
 $conteudo=$conteudo.'<th>Variável</th>';
 $conteudo=$conteudo.'<th>Valor Inicial (B)</th>';
 $conteudo=$conteudo.'<th>Preço Sombra</th>';
@@ -258,13 +256,158 @@ $conteudo=$conteudo.'</table></div>';
 $conteudo=$conteudo.'</div>';
 $conteudo=$conteudo.'<br><br>';
 
+$conteudo=$conteudo.'<div class="sensibilidade-js-wrapper col-sm-12"></div>';
+
+$conteudo=$conteudo.'
+<script>
+
+var wlicesInfo = {
+  numVars: '.($qtdecolunas-$qtdelinhas).',
+  numRest: '.($qtdelinhas-2).'
+}
+
+wlicesInfo.numLinhas = wlicesInfo.numVars + wlicesInfo.numRest;
+
+var sensibilidadeData = {},
+    sensibilidadeData_count = 1
+
+// preencher linhas de variáveis principais
+for (i = 0; i < wlicesInfo.numVars; i++) {
+
+    var newLine = {
+        type: "var",
+        index: i+1,
+        HTMLLabel: "X<sub>"+(i+1)+"</sub>",
+        HTMLText: "X"+(i+1),
+        valorInicial: 0,
+        valorFinal: 0,
+        precoSombra: "-",
+        limiteMaximo: "-",
+        limiteMinimo: "-"
+    }
+
+    // encontrar valor final
+    $("[data-table-name=\"tabelaFinal\"] tbody tr").each(function (indexInArray, valueOfElement) {
+   
+        if ($(valueOfElement).find("td:first-child").text() == newLine.HTMLText) {
+            newLine.valorFinal = $(valueOfElement).find("td:last-child").text();
+        }
+    });
+
+    // encontrar preço sombra
+    newLine.precoSombra = $("[data-table-name=\"tabelaFinal\"] tbody tr:last-child td:nth-child("+(sensibilidadeData_count+1)+")").text();
+    if (newLine.precoSombra == 0) newLine.precoSombra = "-";
+
+  sensibilidadeData[sensibilidadeData_count] = newLine;
+
+  sensibilidadeData_count++;
+}
+
+// preencher linhas de variáveis de folga
+for (i = 0; i < wlicesInfo.numRest; i++) {
+    var newLine = {
+        type: "rest",
+        index: i+1,
+        HTMLLabel: "F<sub>"+(i+1)+"</sub>",
+        HTMLText: "F"+(i+1),
+        valorFinal: 0,
+        precoSombra: "-",
+        limiteMaximo: "?",
+        limiteMinimo: "?"
+    }
+
+    // encontrar valor inicial
+    $("[data-table-name=\"tabelaInicial\"] tbody tr").each(function (indexInArray, valueOfElement) {
+   
+        if ($(valueOfElement).find("td:first-child").text() == newLine.HTMLText) {
+            newLine.valorInicial = $(valueOfElement).find("td:last-child").text();
+        }
+    });
+
+    // encontrar valor final
+    $("[data-table-name=\"tabelaFinal\"] tbody tr").each(function (indexInArray, valueOfElement) {
+   
+        if ($(valueOfElement).find("td:first-child").text() == newLine.HTMLText) {
+            newLine.valorFinal = $(valueOfElement).find("td:last-child").text();
+        }
+    });
+
+    // encontrar preço sombra
+    newLine.precoSombra = $("[data-table-name=\"tabelaFinal\"] tbody tr:last-child td:nth-child("+(sensibilidadeData_count+1)+")").text();
+    if (newLine.precoSombra == 0) newLine.precoSombra = "-";
+
+    // encontrar limite maximo e minimo
+    $("[data-table-name=\"sensibilidadePreview\"] tbody tr").each(function (indexInArray, valueOfElement) {
+   
+        if ($(valueOfElement).find("td:first-child").text() == newLine.HTMLText) {
+            newLine.limiteMaximo = $(valueOfElement).find("td:nth-child(4)").text();
+            newLine.limiteMinimo = $(valueOfElement).find("td:nth-child(5)").text();
+        }
+    });
+
+    sensibilidadeData[sensibilidadeData_count] = newLine;
+
+    sensibilidadeData_count++;
+}
+
+// preencher linha do Z
+    var newLine = {
+        type: "result",
+        index: 1,
+        HTMLLabel: "Z",
+        HTMLText: "Z",
+        valorInicial: 0,
+        precoSombra: "-",
+        limiteMaximo: "-",
+        limiteMinimo: "-"
+    }
+
+    // encontra valor final
+    newLine.valorFinal = $("[data-table-name=\"tabelaFinal\"] tbody tr:last-child td:last-child").text();
+
+    sensibilidadeData[sensibilidadeData_count] = newLine;
+
+// montar tabela no dom
+var tabelaNova = "<div class=\"row\"><div class=\"col-lg-12\">";
+tabelaNova += "<div class=\"wlices--tabela-responsiva\" data-table-name=\"sensibilidadeNova\"><table class=\"table table-bordered\"><thead><tr>";
+tabelaNova += "<th>Variável</th>";
+tabelaNova += "<th>Valor Inicial</th>";
+tabelaNova += "<th>Valor Final</th>";
+tabelaNova += "<th>Preço Sombra</th>";
+tabelaNova += "<th>Limite Máximo</th>";
+tabelaNova += "<th>Limite Mínimo</th>";
+tabelaNova += "</tr></thead>";
+tabelaNova += "<tbody>";
+
+Object.values(sensibilidadeData).forEach(element => {
+    tabelaNova += "<tr>";
+    tabelaNova += "<td>"+ element.HTMLLabel +"</td>";
+    tabelaNova += "<td>"+ element.valorInicial +"</td>";
+    tabelaNova += "<td>"+ element.valorFinal +"</td>";
+    tabelaNova += "<td>"+ element.precoSombra +"</td>";
+    tabelaNova += "<td>"+ element.limiteMaximo +"</td>";
+    tabelaNova += "<td>"+ element.limiteMinimo +"</td>";
+    tabelaNova += "</tr>";
+});
+
+tabelaNova += "</tbody>";
+tabelaNova += "</table></div>";
+tabelaNova += "</div>";
+
+$(".sensibilidade-js-wrapper").html(tabelaNova);
+
+$("[data-table-name=\"sensibilidadePreview\"]").hide();
+
+</script>
+';
+
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();
 
-echo '<pre>';
-print_r($_SESSION['qtdelinhas']);
-print_r($tabelaprecosombra);
-print_r($_SESSION);
-echo '</pre>';
+// echo '<pre>';
+// print_r($_SESSION['qtdelinhas']);
+// print_r($tabelaprecosombra);
+// print_r($_SESSION);
+// echo '</pre>';
 exit;
 ?>

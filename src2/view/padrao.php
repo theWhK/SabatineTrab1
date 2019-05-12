@@ -41,7 +41,8 @@ class template{
 			    <title>'    .$this->GetTitle().    '</title>
 			    <!--link href="css/bootstrap.css" rel="stylesheet"-->
     			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-			    <link href="view/bootstrap/css/app.css" rel="stylesheet">
+					<link href="view/bootstrap/css/app.css" rel="stylesheet">
+					<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 			  </head>
 			  <body>';
 
@@ -69,7 +70,7 @@ class template{
 
 			    
 			  
-			    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+			    
 			    <!--script src="js/bootstrap.min.js"></script-->
     			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 			  </body>
