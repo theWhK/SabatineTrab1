@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <body>
 <?php
 require_once './constants.php';
@@ -8,7 +9,6 @@ $tela = new template;
 $tela->deixarPaginaNaoVisivel = true; 
 $tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
-session_start();
 $etapa = 0;
 $tabela = array();
 $linhaZ = array();

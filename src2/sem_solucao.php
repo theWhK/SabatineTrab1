@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <body>
 <?php
 require_once './constants.php';
@@ -7,7 +8,6 @@ $simplex = new Simplex;
 $tela = new template;
 $tela->SetTitle('Método Simplex');
 $tela->SetProjectName('Sabatinex');
-session_start();
 
 $conteudo='';
 

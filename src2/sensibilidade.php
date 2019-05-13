@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <body>
 <?php
 require_once './constants.php';
@@ -8,7 +9,6 @@ $simplex = new Simplex;
 $tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
 $conteudo='';
-session_start();
 $tabelafinalinicial = array();
 $tabelafinalfinal = array();
 $qtdelinhas = $_SESSION['qtdelinhas'];

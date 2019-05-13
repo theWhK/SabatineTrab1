@@ -1,10 +1,10 @@
+<?php session_start(); ?>
 <body>
 <?php
 require('view/template.php');
 $tela = new template;
 $tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
-session_start();
 
 //é criado dinimicamente os campos para preennche-los
 if (isset($_GET['qtdevariaveis']) and isset($_GET['qtderestricoes']) and isset($_GET['objetivo']))

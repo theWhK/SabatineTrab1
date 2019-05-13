@@ -1,8 +1,9 @@
+<?php session_start(); ?>
 <body>
 <?php
+session_start();
 require('view/template.php');
 $tela = new template;
-session_start();
 $tela->SetTitle('Método Simplex');
 $tela->SetProjectName('Sabatinex');
 

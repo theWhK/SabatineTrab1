@@ -1,10 +1,10 @@
+<?php session_start(); ?>
 <body>
 <?php
 require_once './constants.php';
 require('view/template.php');
 $tela = new template;
 $tela->deixarPaginaNaoVisivel = true;
-session_start();
 $tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
 
