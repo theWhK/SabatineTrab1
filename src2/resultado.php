@@ -6,7 +6,6 @@ require_once('view/template.php');
 require_once('simplex.php');
 $simplex = new Simplex;
 $tela = new template;
-$tela->deixarPaginaNaoVisivel = true; 
 $tela->SetTitle('Pesquisa operacional, simplificada - Sabatinex');
 $tela->SetProjectName('Sabatinex');
 $etapa = 0;
@@ -27,6 +26,10 @@ if (empty($qtderepeticoes) || $qtderepeticoes > 100) {
 }
 
 $passoapasso=$_GET['passoapasso'];
+
+if ($passoapasso != 'S') {
+	$tela->deixarPaginaNaoVisivel = true; 
+}
 
 $tabela[0][0]="Base";
 	for ($coluna=1; $coluna <= $_SESSION['qtdevariaveis'] ; $coluna++)
@@ -74,6 +77,8 @@ $tabela[0][0]="Base";
 $_SESSION['tabelainicial'] = $tabela;
 
 do{
+	// wrapper de cada iteração
+	$conteudo = $conteudo.'<article class="wlices--iteracao-wrapper" data-iteracao-count="'.$qtderepeticoes.'">';
 	//descobre quem entra e sai da base
 	$etapa++;
 	if ($passoapasso=='S')
@@ -82,7 +87,7 @@ do{
 		$conteudo=$conteudo.'<br><h4>Etapa '.$etapa.': Selecionando os coeficientes que irão entrar e sair</h4>';
 		$conteudo=$conteudo.'<h5 style="color:green;">Quem entra na base?</h5>';
 		$conteudo=$conteudo.'<h5><p><p>O valor mais negativo existente na função objetivo.</p></p></h5>';
-		$conteudo=$conteudo.'<h5 style="color:yellow;">Quem sai da base?</h5>';
+		$conteudo=$conteudo.'<h5 style="color:#33a;">Quem sai da base?</h5>';
 		$conteudo=$conteudo.'<h5><p><p>O menor coeficiente da divisão entre a coluna B pela coluna que entrará na base.</p></p></h5>';
 	}
 	$simplex->SetTabela($tabela);
@@ -131,6 +136,7 @@ do{
 	if ($impossivel)
 	{
 		$solucao=2;
+		$conteudo = $conteudo.'</article>';
 		break;
 	}
 
@@ -168,6 +174,7 @@ do{
 	if ($negativos<0)
 	{
 		$solucao=2;
+		$conteudo = $conteudo.'</article>';
 		break;
 	}
 	//testa se tem numeros negativos nos resultados das divisoes , se tiver , para a repeticao e define com impossivel  
@@ -191,6 +198,7 @@ do{
 	if ($pivo==0)
 	{
 		$solucao=2;//impossivel
+		$conteudo = $conteudo.'</article>';
 		break;
 	}
 
@@ -271,17 +279,26 @@ do{
 	if ($negativos==0)
 	{
 		$solucao=0;
+		$conteudo = $conteudo.'</article>';
 		break;
 	}else{
 		if ($qtderepeticoes==$limite_repeticoes)
 		{
 			$solucao=1;
+			$conteudo = $conteudo.'</article>';
 			break;
 	   	}
 	}
 	$qtderepeticoes++;
 	$etapa =0;
+
+	// wrapper de cada iteração
+	$conteudo = $conteudo.'</article>';
 }while($qtderepeticoes<=$limite_repeticoes);
+
+// contagem de iterações que há na pág pro js
+$conteudo=$conteudo.'<input type="hidden" name="contagem-iteracoes" value="'.$qtderepeticoes.'">';
+$conteudo=$conteudo.'<script src="view/bootstrap/js/paginacao.js"></script>';
 
 $basicas= array();
 
@@ -418,12 +435,15 @@ window.onload = function() {
 </script>
 ';
 
-$conteudo = $conteudo .
-'
-<script>
-window.onload = proxima();
-</script>
-';
+if ($passoapasso != 'S')
+{
+	$conteudo = $conteudo .
+	'
+	<script>
+	window.onload = proxima();
+	</script>
+	';
+}
 
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();

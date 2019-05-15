@@ -33,7 +33,7 @@ $conteudo='
             </div>
             </div>
         </div>
-        <!--div class="col-sm-6">
+        <div class="col-sm-6">
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Programação dinâmica</h5>
@@ -41,7 +41,7 @@ $conteudo='
                 <a href="'.URL_BASE.'/mochila.php" class="btn btn-primary">Calcular</a>
             </div>
             </div>
-        </div-->
+        </div>
     </div>
 </div>
 ';

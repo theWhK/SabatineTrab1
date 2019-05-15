@@ -48,7 +48,7 @@ function mountTable() {
     var weightCell = row.insertCell(1);
     var valueCell = row.insertCell(2);
 
-    btnCell.innerHTML = '<button type="button" class="btn btn-primary btn-xs" onclick="deleteItem(' + index + ')"><span class="glyphicon glyphicon-remove"></span></button>';
+    btnCell.innerHTML = '<button type="button" class="btn btn-primary btn-xs" onclick="deleteItem(' + index + ')">X</button>';
     weightCell.innerHTML = itens[index][C_WEIGHT];
     valueCell.innerHTML = itens[index][C_VALUE];
   }
@@ -135,7 +135,7 @@ function backpack() {
       tblSolutionRows[index].className = 'success';
       weight = weight - Number(actualRow[1].innerHTML);
       var p = document.createElement('p');
-      p.innerHTML ='- Peso ' + actualRow[1].innerHTML + ' (Valor - ' + actualRow[0].innerHTML + ')';
+      p.innerHTML ='* Peso ' + actualRow[1].innerHTML + ' (Valor ' + actualRow[0].innerHTML + ')';
       finalSolution.appendChild(p);
     }
   }
