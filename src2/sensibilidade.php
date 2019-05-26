@@ -383,7 +383,7 @@ Object.values(sensibilidadeData).forEach(element => {
     tabelaNova += "<tr>";
     tabelaNova += "<td>"+ element.HTMLLabel +"</td>";
     tabelaNova += "<td>"+ element.valorInicial +"</td>";
-    tabelaNova += "<td>"+ element.valorFinal +"</td>";
+    tabelaNova += "<td class="+ (element.HTMLLabel === "Z" ? "zClass" : "") +">"+ element.valorFinal +"</td>";
     tabelaNova += "<td>"+ element.precoSombra +"</td>";
     tabelaNova += "<td>"+ element.limiteMaximo +"</td>";
     tabelaNova += "<td>"+ element.limiteMinimo +"</td>";
@@ -397,6 +397,16 @@ tabelaNova += "</div>";
 $(".sensibilidade-js-wrapper").html(tabelaNova);
 
 $("[data-table-name=\"sensibilidadePreview\"]").hide();
+
+window.onload = function() {
+	
+	let obj = "'.$_SESSION['objetivo'].'";
+	
+	if (obj == "min") {
+	    let z_final_td = $(".zClass");
+	    z_final_td.text("-"+z_final_td.text());
+	}
+}
 
 </script>
 ';
