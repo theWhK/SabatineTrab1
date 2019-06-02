@@ -96,6 +96,20 @@ $conteudo=$conteudo.'<button id="submit" name="submitDetalhado" class="btn btn-p
 $conteudo=$conteudo.'</form>';
 $conteudo=$conteudo.'</div></div>';
 
+$sessionValuesArray = [];
+for ( $i = 1; $i <= $_SESSION['qtdevariaveis']; $i++) {
+	$sessionValuesArray['z'.$i] = $_SESSION['z'.$i];
+}
+
+for ($j = 1; $j <= $_SESSION['qtderestricoes']; $j++) {
+	for ( $i = 1; $i <= $_SESSION['qtdevariaveis']; $i++) {
+		$sessionValuesArray['r'.$j.'_'.$i] = $_SESSION['r'.$j.'_'.$i];
+
+	}
+	$sessionValuesArray['resultado'.$j] = $_SESSION['resultado'.$j];
+}
+
+
 $conteudo = $conteudo .
 	'
 <script>
@@ -110,11 +124,28 @@ window.onload = function() {
 	item = JSON.stringify(item);
 
     localStorage.setItem(\'inicio_simplex\', item);
+	
+	if ("'.$_GET['fix_values'].'" == "yes") {
+    	var qtdVar = '.$_SESSION['qtdevariaveis'].',
+    	    qtdRest = '.$_SESSION['qtderestricoes'].',
+    	    sessionValues = '.json_encode($sessionValuesArray).';
+    	    console.log(sessionValues);
+    	
+    	for (var i=1; i <= qtdVar; i++) {
+    		$("input[name$=z"+ i +"]").val(sessionValues["z"+i]);
+    	}
+    	
+    	for (var j=1; j <= qtdRest; j++) {
+    		for (var i=1; i <= qtdVar; i++) {
+    		    $("input[name$=r"+ j +"_"+ i +"]").val(sessionValues["r"+ j + "_" + i]);
+    	    }
+            $("input[name$=resultado"+ j +"]").val(sessionValues["resultado"+j]);
+        }
+	}
+    
 }
 </script>
 ';
-
-
 
 $tela->SetContent($conteudo);
 $tela->ShowTemplate();

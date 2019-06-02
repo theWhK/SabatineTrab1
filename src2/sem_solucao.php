@@ -23,7 +23,7 @@ $conteudo=$conteudo.'
                 <p class="mt-2">Não existe solução possível com os dados informados.</p>
             </div>
             <button class="btn mr-3" style="background-color: #aaaaaa; color: white; width: 160px" onclick="window.location.href=\'/\'" >Voltar ao inicio</button>
-            <button class="btn" style="background-color: #ffc40d; color: white; width: 160px" onclick="window.location.href=\'/inicio_simplex.php\'">Corrigir Valores</button>
+            <button class="btn" style="background-color: #ffc40d; color: white; width: 160px" onclick="window.location.href=\'/restricoes.php?fix_values=yes\'">Corrigir Valores</button>
         </div>
     </div>';
 

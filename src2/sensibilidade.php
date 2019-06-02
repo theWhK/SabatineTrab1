@@ -401,9 +401,9 @@ $("[data-table-name=\"sensibilidadePreview\"]").hide();
 window.onload = function() {
 	
 	let obj = "'.$_SESSION['objetivo'].'";
+	let z_final_td = $(".zClass");
 	
-	if (obj == "min") {
-	    let z_final_td = $(".zClass");
+	if (obj == "min" && z_final_td.text() != "0") {
 	    z_final_td.text("-"+z_final_td.text());
 	}
 }
