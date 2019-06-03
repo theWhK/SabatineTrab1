@@ -82,6 +82,7 @@ Datas | Eventos
 08/05/19    | Implementação de Nova AS para MVP 3
 08/05/19    | Atualização do README
 12/05/19    | Ajustes para MVP 3
+02/05/19    | Ajustes para MVP 3.1 e deploy
 
 
 ### Mochila
@@ -91,6 +92,7 @@ Datas | Eventos
 01/05/19    | Implementação da Estrutura de PD
 02/05/19    | Implementação da Lógica de PD
 08/05/19    | Integração da Lógica na Estrutura
+02/06/19    | Finalização e testes da Mochila para MVP 3.1, e deploy
 
 ## Compatibilidade
 
@@ -127,3 +129,8 @@ Código | Título | Tarefa | Situação | Observação
 --------- | ------ | -------| -------| -------
 1 | Tabela de solução | Demonstrar ao usuário as etapas do algoritmo | Em desenvolvimento |
 2 | Solução do problema | Mostrar ao usuário os itens selecionados pelo algoritmo como qualificados | Em desenvolvimento |
+
+## Equipe
+
+- Ulisses de Souza Melo (567728)
+- Willian Hideki Kawabata (573051)
