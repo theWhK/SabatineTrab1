@@ -10,13 +10,13 @@ O Simplex permite que se encontre valores ideais em situações em que diversos 
 O algoritmo da mochila consiste em preencher a mochila com objetos diferentes de pesos e valores. O objetivo é que preencha a mochila com o maior valor possível, não ultrapassando o peso máximo.
 
 
-## Ferramentas
+## Ferramentas usadas
 
 - ECMAScript
 - jQuery
 - PHP
 - GitHub para versionamento
-- DigitalOcean/Vultr para hospedagem
+- DigitalOcean para hospedagem
 
 ## Nota de realease a ser publicado
 
@@ -29,7 +29,7 @@ O algoritmo da mochila consiste em preencher a mochila com objetos diferentes de
 
 ### Mochila
 
-- Apreentação da solução, dos itens a serem considerados e a tabela de cálculo.
+- Apresentação da solução, dos itens a serem considerados e a tabela de cálculo.
 
 
 ## Entradas personalizadas para:
@@ -48,7 +48,8 @@ O algoritmo da mochila consiste em preencher a mochila com objetos diferentes de
 
 ### Simplex
 
-- Em cada variável da função objetivo e das restrições deve conter apenas o número, sem a adição do 'x', separando os números por ';' e caso tenha alguma variável nula, é necessário inserir o 0.
+- Em cada variável da função objetivo e das restrições deve conter apenas o número, sem a adição do 'x', separando os números por ';'
+- Caso tenha alguma variável nula, é necessário inserir o 0
 
 
 ### Mochila
@@ -107,10 +108,11 @@ Tecnologias | Ferramentas
 --------- | ------
 Front-End     | HTML, ECMAScript, jQuery
 Back-End    | PHP
-Framework Web    | Bootstrap
+Framework UI    | Bootstrap
 Editor de Texto  | VS Code, IntelliJ IDEA
-Servidor Local  | Laradock
-Servidor Web    | https://github.io/
+Servidor Local  | Laradock e Devilbox
+Servidor Web    | DigitalOcean
+DNS Handling    | Cloudflare
 
 ## Atividades Realizadas no Período
 
@@ -120,15 +122,15 @@ Código | Título | Tarefa | Situação | Observação
 --------- | ------ | -------| -------| -------
 1 | Maximizar | Montar a Tabela Simplex, e possibilitar o usuário a maximizar modelos de simplex com sistemas lineares. | Concluído | Apenas restrições de “<=”
 2 | Minimizar | Montar a Tabela Simplex, e possibilitar o usuário a minimizar modelos de simplex com sistemas lineares. | Concluído | Apenas restrições de “<=”
-3 | Demonstrar passo a passo | Demonstrar ao usuário as alterações na tabela causada pelas iterações do método simplex. | Em desenvolvimento|
-4  | Tabela de sensibilidade | Demonstrar ao usuário a tabela de sensibilidade. |Em desenvolvimento|
+3 | Demonstrar passo a passo | Demonstrar ao usuário as alterações na tabela causada pelas iterações do método simplex. | Concluído |
+4  | Tabela de sensibilidade | Demonstrar ao usuário a tabela de sensibilidade. | Concluído |
 
 ### Mochila
 
 Código | Título | Tarefa | Situação | Observação
 --------- | ------ | -------| -------| -------
-1 | Tabela de solução | Demonstrar ao usuário as etapas do algoritmo | Em desenvolvimento |
-2 | Solução do problema | Mostrar ao usuário os itens selecionados pelo algoritmo como qualificados | Em desenvolvimento |
+1 | Tabela de solução | Demonstrar ao usuário as etapas do algoritmo | Concluído |
+2 | Solução do problema | Mostrar ao usuário os itens selecionados pelo algoritmo como qualificados | Concluído |
 
 ## Equipe
 
