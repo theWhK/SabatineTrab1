@@ -9,6 +9,8 @@ O Simplex permite que se encontre valores ideais em situações em que diversos 
 
 O algoritmo da mochila consiste em preencher a mochila com objetos diferentes de pesos e valores. O objetivo é que preencha a mochila com o maior valor possível, não ultrapassando o peso máximo.
 
+Acesso em: http://sabatinex.willianhideki.com.br
+
 
 ## Ferramentas usadas
 
